@@ -9,6 +9,7 @@ COPY . /app
 
 # pyppeteer stuff
 RUN pyppeteer-install
+RUN chmod -R 777 /root/.local/share/pyppeteer/local-chromium
 RUN apt-get update && apt-get install -y libx11-xcb-dev libxcomposite1 \
                                          libxdamage1 libxi6 libxtst6 libnss3 \
                                          libxss1 libxrandr2 libasound2 \
