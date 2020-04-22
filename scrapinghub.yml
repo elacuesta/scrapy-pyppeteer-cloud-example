@@ -1,0 +1,8 @@
+project: 444424
+endpoints:
+  default: https://dash.scrapinghub.com/api/
+version: GIT
+requirements:
+  file: requirements.txt
+stacks:
+    default: scrapy:2.0-20200313

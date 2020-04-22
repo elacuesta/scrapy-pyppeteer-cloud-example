@@ -1,0 +1,4 @@
+scrapy-pyppeteer
+shub
+scrapy>=2.0
+msgpack-python
