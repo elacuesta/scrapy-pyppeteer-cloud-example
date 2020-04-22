@@ -25,7 +25,7 @@ TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 
 DOWNLOAD_HANDLERS = {
     "http": "scrapy_pyppeteer.ScrapyPyppeteerDownloadHandler",
-    "https": "scrapy_pyppeteer.ScrapyPyppeteerDownloadHandler",
+    # "https": "scrapy_pyppeteer.ScrapyPyppeteerDownloadHandler",
 }
 
 FEED_EXPORT_ENCODING = "utf8"
