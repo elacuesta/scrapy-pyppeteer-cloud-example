@@ -1,3 +1,4 @@
+pyppeteer
 scrapy-pyppeteer
 shub
 scrapy>=2.0
