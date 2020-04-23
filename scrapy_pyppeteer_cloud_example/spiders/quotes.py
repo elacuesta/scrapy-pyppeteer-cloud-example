@@ -8,8 +8,8 @@ logging.getLogger("pyppeteer").setLevel(logging.INFO)
 logging.getLogger("websockets").setLevel(logging.INFO)
 
 
-class PyppeteerSpider(Spider):
-    name = "pyppeteer"
+class QuotesSpider(Spider):
+    name = "quotes"
 
     def start_requests(self):
         from scrapy_pyppeteer import PageCoroutine
