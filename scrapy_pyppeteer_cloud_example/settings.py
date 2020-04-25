@@ -24,8 +24,8 @@ ROBOTSTXT_OBEY = False
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 
 DOWNLOAD_HANDLERS = {
-    "http": "scrapy_pyppeteer.ScrapyPyppeteerDownloadHandler",
-    # "https": "scrapy_pyppeteer.ScrapyPyppeteerDownloadHandler",
+    "http": "scrapy_pyppeteer.handler.ScrapyPyppeteerDownloadHandler",
+    # "https": "scrapy_pyppeteer.handler.ScrapyPyppeteerDownloadHandler",
 }
 
 FEED_EXPORT_ENCODING = "utf8"

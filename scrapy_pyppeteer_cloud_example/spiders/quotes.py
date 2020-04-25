@@ -1,7 +1,7 @@
 import logging
 
-from scrapy.http import Request
-from scrapy.spiders import Spider
+from scrapy import Spider, Request
+from scrapy_pyppeteer.page import PageCoroutine
 
 
 logging.getLogger("pyppeteer").setLevel(logging.INFO)
@@ -12,7 +12,6 @@ class QuotesSpider(Spider):
     name = "quotes"
 
     def start_requests(self):
-        from scrapy_pyppeteer import PageCoroutine
         yield Request(
             url="http://quotes.toscrape.com/scroll",
             meta=dict(
