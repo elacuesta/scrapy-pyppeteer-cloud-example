@@ -9,14 +9,16 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'scrapy_pyppeteer_cloud_example'
+BOT_NAME = "scrapy_pyppeteer_cloud_example"
 
-SPIDER_MODULES = ['scrapy_pyppeteer_cloud_example.spiders']
-NEWSPIDER_MODULE = 'scrapy_pyppeteer_cloud_example.spiders'
-
+SPIDER_MODULES = ["scrapy_pyppeteer_cloud_example.spiders"]
+NEWSPIDER_MODULE = "scrapy_pyppeteer_cloud_example.spiders"
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'scrapy_pyppeteer_cloud_example (+http://www.yourdomain.com)'
+USER_AGENT = (
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36"
+)
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
@@ -30,3 +32,5 @@ DOWNLOAD_HANDLERS = {
 
 FEED_EXPORT_ENCODING = "utf8"
 FEED_EXPORT_INDENT = 4
+
+CONCURRENT_REQUESTS = 32
