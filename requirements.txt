@@ -1,5 +1,5 @@
 pyppeteer
-scrapy-pyppeteer
+scrapy-pyppeteer>=0.0.8
 shub
 scrapy>=2.0
 msgpack-python
