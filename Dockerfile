@@ -44,6 +44,7 @@ RUN wget ${CHROMIUM_PATH}/${CHROMIUM_REVISION}/chrome-linux.zip -P /chrome && \
     unzip /chrome/chrome-linux.zip -d /chrome && \
     rm /chrome/chrome-linux.zip && \
     chmod -R 777 /chrome
+ENV CHROMIUM_LOCAL_PATH /chrome/chrome-linux/chrome
 
 WORKDIR /app
 COPY ./requirements.txt /app/requirements.txt
