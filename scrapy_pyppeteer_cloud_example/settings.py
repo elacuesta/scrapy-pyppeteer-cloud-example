@@ -9,7 +9,6 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-import getpass
 import os
 
 
@@ -46,6 +45,3 @@ PYPPETEER_LAUNCH_OPTIONS = {}
 # when running on Docker (Scrapy Cloud)
 if os.environ.get("CHROMIUM_LOCAL_PATH"):
     PYPPETEER_LAUNCH_OPTIONS["executablePath"] = os.environ["CHROMIUM_LOCAL_PATH"]
-
-if getpass.getuser() == "root":
-    PYPPETEER_LAUNCH_OPTIONS["args"] = ["--no-sandbox"]
