@@ -10,15 +10,19 @@ logging.getLogger("websockets").setLevel(logging.INFO)
 class BooksSpider(Spider):
     name = "books"
 
+    pyppeteer = False
+
     def start_requests(self):
-        yield Request("http://books.toscrape.com", meta={"pyppeteer": True})
+        yield Request("http://books.toscrape.com", meta={"pyppeteer": self.pyppeteer})
 
     def parse(self, response):
         self.logger.info("Parsing page %s", response.url)
         yield from response.follow_all(
-            css="article.product_pod h3 a", callback=self.parse_book, meta={"pyppeteer": True},
+            css="article.product_pod h3 a",
+            callback=self.parse_book,
+            meta={"pyppeteer": self.pyppeteer},
         )
-        yield from response.follow_all(css="li.next a", meta={"pyppeteer": True})
+        yield from response.follow_all(css="li.next a", meta={"pyppeteer": self.pyppeteer})
 
     def parse_book(self, response):
         return {
